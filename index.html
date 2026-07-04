@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="th" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="เว็บไซต์แนวคิดมหกรรมพืชสวนโลก อุดรธานี 2569 — Udon Thani International Horticultural Expo 2026"
+    />
+    <meta name="theme-color" content="#071814" />
+    <title>Udon Thani Expo 2026 — Diversity of Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=4" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">ข้ามไปยังเนื้อหา</a>
+
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="botanical-drift" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <nav class="navbar shell" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Udon Thani Expo 2026 home">
+          <span class="brand-mark" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+            <b></b>
+          </span>
+          <span class="brand-type">
+            <strong>UDON THANI</strong>
+            <small>EXPO 2026</small>
+          </span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#about" data-i18n="nav_about">เรื่องราว</a>
+          <a href="#map" data-i18n="nav_map">พื้นที่จัดงาน</a>
+          <a href="#gardens" data-i18n="nav_gardens">สวนเด่น</a>
+          <a href="#events" data-i18n="nav_events">กิจกรรม</a>
+          <a href="#visit" data-i18n="nav_visit">วางแผนเที่ยว</a>
+        </div>
+
+        <div class="nav-actions">
+          <div class="language-switch" role="group" aria-label="Language">
+            <button class="lang-btn is-active" type="button" data-lang="th" aria-pressed="true">TH</button>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+            <button class="lang-btn" type="button" data-lang="zh" aria-pressed="false">中</button>
+          </div>
+          <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 15.4A8.5 8.5 0 0 1 8.6 3.5 8.5 8.5 0 1 0 20.5 15.4Z"></path>
+            </svg>
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5"></circle>
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+            </svg>
+          </button>
+          <a class="nav-ticket" href="#tickets" data-i18n="nav_tickets">บัตรเข้าชม</a>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="navLinks"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <img
+          class="hero-image hero-scene-one"
+          src="./assets/hero-wetland.webp"
+          alt="Cinematic view of a horticultural expo integrated into Udon Thani wetlands"
+        />
+        <img
+          class="hero-image hero-scene-two"
+          src="./assets/garden-wetland.webp"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="hero-image hero-scene-three"
+          src="./assets/garden-light.webp"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-light-rays" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="water-shimmer" aria-hidden="true"></div>
+        <canvas id="particleCanvas" aria-hidden="true"></canvas>
+        <div class="hero-orb orb-one" aria-hidden="true"></div>
+        <div class="hero-orb orb-two" aria-hidden="true"></div>
+
+        <div class="hero-content shell">
+          <div class="hero-kicker reveal">
+            <span class="live-dot"></span>
+            <span data-i18n="hero_kicker">มหกรรมพืชสวนโลกระดับ A1</span>
+            <span class="kicker-line"></span>
+            <span>UDON THANI · THAILAND</span>
+          </div>
+
+          <h1 class="hero-title reveal" data-delay="1">
+            <span data-i18n="hero_title_top">ความหลากหลาย</span>
+            <span class="gradient-text" data-i18n="hero_title_bottom">แห่งสรรพชีวิต</span>
+          </h1>
+
+          <p class="hero-lead reveal" data-delay="2" data-i18n="hero_lead">
+            เมื่อผู้คน สายน้ำ และพืชพรรณ กลับมาเติบโตไปด้วยกัน
+            พบกับมหกรรมพืชสวนโลกบนพื้นที่ชุ่มน้ำครั้งแรกของโลก
+          </p>
+
+          <div class="hero-cta reveal" data-delay="3">
+            <a class="button button-primary magnetic" href="#about">
+              <span data-i18n="hero_explore">สำรวจมหกรรม</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+            <button class="watch-button" id="storyButton" type="button">
+              <span class="play-ring">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5Z"></path></svg>
+              </span>
+              <span data-i18n="hero_story">ชมเรื่องราว 01:24</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-bottom shell">
+          <div class="countdown-card glass reveal" data-delay="4">
+            <div class="countdown-label">
+              <span data-i18n="countdown_label">นับถอยหลังสู่วันเปิดงาน</span>
+              <small data-i18n="countdown_date">1 พฤศจิกายน 2569</small>
+            </div>
+            <div class="countdown" aria-label="Countdown to Expo opening">
+              <div><strong id="days">000</strong><span data-i18n="days">วัน</span></div>
+              <i>:</i>
+              <div><strong id="hours">00</strong><span data-i18n="hours">ชม.</span></div>
+              <i>:</i>
+              <div><strong id="minutes">00</strong><span data-i18n="minutes">นาที</span></div>
+              <i>:</i>
+              <div><strong id="seconds">00</strong><span data-i18n="seconds">วินาที</span></div>
+            </div>
+          </div>
+
+          <div class="hero-meta glass reveal" data-delay="5">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="2.5"></circle>
+            </svg>
+            <div>
+              <strong data-i18n="location_title">หนองแด อุดรธานี</strong>
+              <span data-i18n="location_sub">164.8 เฮกตาร์ แห่งการเรียนรู้และการเติบโต</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to discover">
+          <span data-i18n="scroll">เลื่อนเพื่อค้นพบ</span>
+          <i></i>
+        </a>
+      </section>
+
+      <section class="intro section" id="about">
+        <div class="aurora aurora-left" aria-hidden="true"></div>
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div class="reveal">
+              <p class="eyebrow"><span>01</span><i></i><span data-i18n="about_eyebrow">แนวคิดมหกรรม</span></p>
+              <h2 data-i18n="about_title_html" data-i18n-html>
+                โลกหนึ่งใบ<br /><em>ชีวิตนับล้าน</em>
+              </h2>
+            </div>
+            <div class="heading-copy reveal" data-delay="1">
+              <p data-i18n="about_body">
+                “Diversity of Life” คือคำชวนให้เราออกแบบอนาคตร่วมกัน
+                ผ่านภูมิปัญญาท้องถิ่น นวัตกรรมสีเขียว และระบบนิเวศพื้นที่ชุ่มน้ำอันเปราะบาง
+              </p>
+              <a class="text-link" href="#map">
+                <span data-i18n="discover_story">ค้นพบเรื่องราวของเรา</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="manifesto-grid">
+            <article class="manifesto-card glass reveal">
+              <div class="manifesto-index">01 / 03</div>
+              <div class="manifesto-icon water-icon">
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M24 5S10 21 10 31a14 14 0 0 0 28 0C38 21 24 5 24 5Z"></path>
+                  <path d="M17 32c2 4 5 6 9 6"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="pillar_water">สายน้ำ</h3>
+                <p data-i18n="pillar_water_body">ฟื้นคืนพื้นที่ชุ่มน้ำ ให้ธรรมชาติเป็นโครงสร้างพื้นฐานของเมือง</p>
+              </div>
+            </article>
+
+            <article class="manifesto-card featured glass reveal" data-delay="1">
+              <div class="manifesto-index">02 / 03</div>
+              <div class="manifesto-icon people-icon">
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <circle cx="18" cy="17" r="6"></circle>
+                  <circle cx="33" cy="20" r="4"></circle>
+                  <path d="M7 39c1-8 5-12 11-12s10 4 11 12M28 29c6-3 11 1 12 8"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="pillar_people">ผู้คน</h3>
+                <p data-i18n="pillar_people_body">เชื่อมชุมชนอีสานสู่เครือข่ายความร่วมมือของผู้คนทั่วโลก</p>
+              </div>
+            </article>
+
+            <article class="manifesto-card glass reveal" data-delay="2">
+              <div class="manifesto-index">03 / 03</div>
+              <div class="manifesto-icon plant-icon">
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M24 42V20M24 30c-8 0-13-5-13-13 8 0 13 5 13 13ZM24 23c0-9 5-14 14-14 0 9-5 14-14 14Z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="pillar_plants">พืชพรรณ</h3>
+                <p data-i18n="pillar_plants_body">รักษาความหลากหลายทางชีวภาพ ด้วยองค์ความรู้และนวัตกรรม</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="impact-strip reveal">
+            <div>
+              <strong>134</strong>
+              <span data-i18n="stat_days">วันแห่งประสบการณ์</span>
+            </div>
+            <div>
+              <strong>164.8</strong>
+              <span data-i18n="stat_area">เฮกตาร์ของพื้นที่จัดงาน</span>
+            </div>
+            <div>
+              <strong>20<sup>+</sup></strong>
+              <span data-i18n="stat_nations">ประเทศร่วมแลกเปลี่ยน</span>
+            </div>
+            <div>
+              <strong>4.6<sup>M</sup></strong>
+              <span data-i18n="stat_visitors">ผู้เข้าชมที่คาดการณ์</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section section" id="map">
+        <div class="shell">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow"><span>02</span><i></i><span data-i18n="map_eyebrow">สำรวจพื้นที่</span></p>
+            <h2 data-i18n="map_title_html" data-i18n-html>หนึ่งพื้นที่<br /><em>หลายโลกให้ค้นพบ</em></h2>
+            <p data-i18n="map_intro">
+              เลือกโซนบนแผนที่เพื่อสำรวจประสบการณ์ที่เชื่อมต่อกันด้วยสายน้ำและเส้นทางสีเขียว
+            </p>
+          </div>
+
+          <div class="map-explorer reveal">
+            <div class="map-panel glass">
+              <div class="map-topbar">
+                <span class="map-status"><i></i><span data-i18n="map_interactive">แผนที่แบบโต้ตอบ</span></span>
+                <div class="map-controls">
+                  <button type="button" id="mapZoomIn" aria-label="Zoom in">+</button>
+                  <button type="button" id="mapZoomOut" aria-label="Zoom out">−</button>
+                </div>
+              </div>
+
+              <div class="map-canvas" id="mapCanvas">
+                <svg viewBox="0 0 920 620" role="img" aria-label="Conceptual interactive expo map">
+                  <defs>
+                    <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#12392f"></stop>
+                      <stop offset="100%" stop-color="#08251f"></stop>
+                    </linearGradient>
+                    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#0b8376"></stop>
+                      <stop offset="100%" stop-color="#07585c"></stop>
+                    </linearGradient>
+                    <filter id="glow">
+                      <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+                      <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+                    </filter>
+                  </defs>
+                  <g class="map-world" id="mapWorld">
+                    <path class="map-land" d="M95 138C179 54 320 58 415 91c86 30 121 9 210 19 123 14 213 88 221 189 8 106-58 205-157 249-108 48-238 15-337 13-105-2-212 15-274-65-60-77-50-188-25-267 12-38 25-72 42-91Z"></path>
+                    <path class="map-water" d="M20 395c112-18 183-107 279-117 101-11 137 77 233 68 99-10 140-100 294-80v110c-123-25-188 65-284 79-111 16-159-67-259-53-96 13-167 103-263 111Z"></path>
+                    <path class="map-path" d="M108 198c82 68 139 74 224 47 87-29 153-60 248-17 63 29 86 99 165 114M194 471c42-97 98-139 184-151 94-13 159 19 226 97"></path>
+
+                    <g class="zone is-active" data-zone="welcome" tabindex="0" role="button" aria-label="Welcome Garden">
+                      <ellipse cx="211" cy="211" rx="79" ry="55"></ellipse>
+                      <circle cx="211" cy="211" r="9"></circle>
+                      <text x="211" y="299">01</text>
+                    </g>
+                    <g class="zone" data-zone="wetland" tabindex="0" role="button" aria-label="Living Wetland">
+                      <ellipse cx="426" cy="386" rx="88" ry="58"></ellipse>
+                      <circle cx="426" cy="386" r="9"></circle>
+                      <text x="426" y="467">02</text>
+                    </g>
+                    <g class="zone" data-zone="world" tabindex="0" role="button" aria-label="World Gardens">
+                      <ellipse cx="610" cy="230" rx="91" ry="61"></ellipse>
+                      <circle cx="610" cy="230" r="9"></circle>
+                      <text x="610" y="315">03</text>
+                    </g>
+                    <g class="zone" data-zone="biodome" tabindex="0" role="button" aria-label="Biodiversity Dome">
+                      <ellipse cx="686" cy="443" rx="72" ry="51"></ellipse>
+                      <circle cx="686" cy="443" r="9"></circle>
+                      <text x="686" y="516">04</text>
+                    </g>
+
+                    <g class="map-trees" aria-hidden="true">
+                      <circle cx="117" cy="327" r="5"></circle><circle cx="143" cy="348" r="8"></circle>
+                      <circle cx="309" cy="148" r="7"></circle><circle cx="340" cy="127" r="5"></circle>
+                      <circle cx="527" cy="508" r="7"></circle><circle cx="557" cy="532" r="5"></circle>
+                      <circle cx="766" cy="188" r="8"></circle><circle cx="793" cy="218" r="5"></circle>
+                      <circle cx="798" cy="467" r="7"></circle><circle cx="161" cy="439" r="6"></circle>
+                    </g>
+                  </g>
+                </svg>
+                <div class="map-compass" aria-hidden="true"><span>N</span><i></i></div>
+              </div>
+            </div>
+
+            <aside class="zone-panel">
+              <div class="zone-number" id="zoneNumber">01</div>
+              <p class="eyebrow small"><i></i><span data-i18n="selected_zone">โซนที่เลือก</span></p>
+              <h3 id="zoneTitle">Welcome Garden</h3>
+              <p id="zoneDescription">
+                ประตูแรกสู่มหกรรม สวนต้อนรับที่ตีความดอกไม้และลายทออีสานผ่านภูมิสถาปัตยกรรมร่วมสมัย
+              </p>
+              <div class="zone-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+                  <b id="zoneTime">45 min</b>
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9l8-5 8 5v10ZM9 19v-6h6v6"></path></svg>
+                  <b id="zoneStops">6 stops</b>
+                </span>
+              </div>
+              <div class="zone-list" role="tablist" aria-label="Expo zones">
+                <button class="is-active" type="button" data-zone="welcome"><span>01</span><b data-i18n="zone_welcome_short">สวนต้อนรับ</b></button>
+                <button type="button" data-zone="wetland"><span>02</span><b data-i18n="zone_wetland_short">พื้นที่ชุ่มน้ำ</b></button>
+                <button type="button" data-zone="world"><span>03</span><b data-i18n="zone_world_short">สวนนานาชาติ</b></button>
+                <button type="button" data-zone="biodome"><span>04</span><b data-i18n="zone_biodome_short">โดมชีวภาพ</b></button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="garden-section section" id="gardens">
+        <div class="shell">
+          <div class="section-heading split-heading compact">
+            <div class="reveal">
+              <p class="eyebrow"><span>03</span><i></i><span data-i18n="gardens_eyebrow">ไฮไลต์สวน</span></p>
+              <h2 data-i18n="gardens_title_html" data-i18n-html>สวนที่ไม่ได้มีไว้แค่ชม<br /><em>แต่มีไว้ให้รู้สึก</em></h2>
+            </div>
+            <p class="heading-copy reveal" data-delay="1" data-i18n="gardens_intro">
+              สามประสบการณ์เด่นที่พาเราเดินทางจากความงามของพืชพรรณ
+              ไปสู่ความเข้าใจใหม่เกี่ยวกับโลกที่เราอาศัยอยู่
+            </p>
+          </div>
+
+          <div class="garden-grid">
+            <article class="garden-card tilt-card reveal">
+              <img src="./assets/garden-orchid.webp" alt="Orchid Cloud Garden pavilion" loading="lazy" />
+              <div class="card-wash"></div>
+              <div class="garden-label"><span>01</span><i></i><span data-i18n="garden_orchid_tag">พฤกษศาสตร์ × หมอก</span></div>
+              <div class="garden-content">
+                <h3 data-i18n="garden_orchid_title">สวนเมฆกล้วยไม้</h3>
+                <p data-i18n="garden_orchid_body">เรือนกระจกที่รวบรวมความงามของกล้วยไม้ไทยไว้ในม่านหมอกบางเบา</p>
+                <span class="round-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="garden-card tall tilt-card reveal" data-delay="1">
+              <img src="./assets/garden-wetland.webp" alt="Living wetland lotus garden" loading="lazy" />
+              <div class="card-wash"></div>
+              <div class="garden-label"><span>02</span><i></i><span data-i18n="garden_wetland_tag">นิเวศ × การเรียนรู้</span></div>
+              <div class="garden-content">
+                <h3 data-i18n="garden_wetland_title">สวนพื้นที่ชุ่มน้ำมีชีวิต</h3>
+                <p data-i18n="garden_wetland_body">ทางเดินเหนือบึงบัวที่เผยให้เห็นความสัมพันธ์ของน้ำ พืช และสิ่งมีชีวิต</p>
+                <span class="round-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </span>
+              </div>
+            </article>
+
+            <article class="garden-card tilt-card reveal" data-delay="2">
+              <img src="./assets/garden-light.webp" alt="Garden of Light at night" loading="lazy" />
+              <div class="card-wash"></div>
+              <div class="garden-label"><span>03</span><i></i><span data-i18n="garden_light_tag">แสง × ประสบการณ์</span></div>
+              <div class="garden-content">
+                <h3 data-i18n="garden_light_title">สวนแห่งแสง</h3>
+                <p data-i18n="garden_light_body">เมื่อราตรีเปลี่ยนพื้นที่ชุ่มน้ำให้กลายเป็นบทกวีของแสง เสียง และเงาสะท้อน</p>
+                <span class="round-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="nations-section">
+        <div class="shell">
+          <div class="nations-copy reveal">
+            <p class="eyebrow"><span>04</span><i></i><span data-i18n="nations_eyebrow">โลกมาพบกันที่อุดรธานี</span></p>
+            <h2 data-i18n="nations_title_html" data-i18n-html>วัฒนธรรมต่างกัน<br /><em>แต่เติบโตใต้ฟ้าเดียวกัน</em></h2>
+            <p data-i18n="nations_body">
+              ชมแนวคิดสวนและนวัตกรรมพืชสวนจากนานาประเทศ
+              ในพื้นที่แลกเปลี่ยนความรู้ที่เชื่อมโลกเข้าหากัน
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="events-section section" id="events">
+        <div class="aurora aurora-right" aria-hidden="true"></div>
+        <div class="shell">
+          <div class="section-heading split-heading compact">
+            <div class="reveal">
+              <p class="eyebrow"><span>05</span><i></i><span data-i18n="events_eyebrow">ปฏิทินประสบการณ์</span></p>
+              <h2 data-i18n="events_title_html" data-i18n-html>ทุกวัน<br /><em>มีสิ่งใหม่ผลิบาน</em></h2>
+            </div>
+            <p class="heading-copy reveal" data-delay="1" data-i18n="events_intro">
+              ตั้งแต่พิธีเปิด นิทรรศการตามฤดูกาล เวิร์กช็อป จนถึงเทศกาลแสงยามค่ำคืน
+            </p>
+          </div>
+
+          <div class="event-layout">
+            <div class="timeline reveal">
+              <button class="timeline-item is-active" type="button" data-event="opening">
+                <span class="timeline-date"><b>01</b><small>NOV<br />2026</small></span>
+                <span class="timeline-copy">
+                  <small data-i18n="event_opening_tag">พิธีการ</small>
+                  <strong data-i18n="event_opening">วันเปิดมหกรรม</strong>
+                </span>
+                <i></i>
+              </button>
+              <button class="timeline-item" type="button" data-event="culture">
+                <span class="timeline-date"><b>15</b><small>NOV<br />2026</small></span>
+                <span class="timeline-copy">
+                  <small data-i18n="event_culture_tag">วัฒนธรรม</small>
+                  <strong data-i18n="event_culture">สัปดาห์มนต์เสน่ห์อีสาน</strong>
+                </span>
+                <i></i>
+              </button>
+              <button class="timeline-item" type="button" data-event="light">
+                <span class="timeline-date"><b>05</b><small>DEC<br />2026</small></span>
+                <span class="timeline-copy">
+                  <small data-i18n="event_light_tag">ค่ำคืนพิเศษ</small>
+                  <strong data-i18n="event_light">เทศกาลสวนแห่งแสง</strong>
+                </span>
+                <i></i>
+              </button>
+              <button class="timeline-item" type="button" data-event="future">
+                <span class="timeline-date"><b>16</b><small>JAN<br />2027</small></span>
+                <span class="timeline-copy">
+                  <small data-i18n="event_future_tag">นวัตกรรม</small>
+                  <strong data-i18n="event_future">เวทีอนาคตสีเขียว</strong>
+                </span>
+                <i></i>
+              </button>
+              <button class="timeline-item" type="button" data-event="closing">
+                <span class="timeline-date"><b>14</b><small>MAR<br />2027</small></span>
+                <span class="timeline-copy">
+                  <small data-i18n="event_closing_tag">บทส่งท้าย</small>
+                  <strong data-i18n="event_closing">พิธีส่งต่อเมล็ดพันธุ์</strong>
+                </span>
+                <i></i>
+              </button>
+            </div>
+
+            <article class="event-feature glass reveal" data-delay="1">
+              <div class="event-art" aria-hidden="true">
+                <span class="event-sun"></span>
+                <span class="event-ring ring-a"></span>
+                <span class="event-ring ring-b"></span>
+                <span class="event-leaf leaf-a"></span>
+                <span class="event-leaf leaf-b"></span>
+                <b>01</b>
+              </div>
+              <div class="event-feature-copy">
+                <span class="event-chip" id="eventChip" data-i18n="event_opening_tag">พิธีการ</span>
+                <h3 id="eventFeatureTitle" data-i18n="event_opening">วันเปิดมหกรรม</h3>
+                <p id="eventFeatureDescription" data-i18n="event_opening_body">
+                  เปิดประตูสู่ 134 วันแห่งความหลากหลาย พร้อมการแสดงสายน้ำ แสง และวัฒนธรรมจากชุมชนอุดรธานี
+                </p>
+                <div class="event-feature-meta">
+                  <span><small data-i18n="date_label">วันที่</small><b id="eventDate">01.11.2026</b></span>
+                  <span><small data-i18n="time_label">เวลา</small><b id="eventTime">17:30 — 20:30</b></span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="daily-program reveal">
+            <div class="program-head">
+              <div>
+                <p class="eyebrow small"><i></i><span data-i18n="daily_eyebrow">กิจกรรมประจำวัน</span></p>
+                <h3 data-i18n="daily_title">เลือกจังหวะของคุณ</h3>
+              </div>
+              <div class="program-tabs" role="tablist">
+                <button class="is-active" type="button" data-period="morning" data-i18n="morning">เช้า</button>
+                <button type="button" data-period="afternoon" data-i18n="afternoon">บ่าย</button>
+                <button type="button" data-period="evening" data-i18n="evening">ค่ำ</button>
+              </div>
+            </div>
+            <div class="schedule-list" id="scheduleList"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section section" id="gallery">
+        <div class="shell">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow"><span>06</span><i></i><span data-i18n="gallery_eyebrow">ภาพแห่งความทรงจำ</span></p>
+            <h2 data-i18n="gallery_title_html" data-i18n-html>เพราะบางความรู้สึก<br /><em>พูดได้ดีกว่าด้วยภาพ</em></h2>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-main reveal">
+              <img src="./assets/hero-wetland.webp" alt="Aerial wetland expo campus at sunrise" loading="lazy" />
+              <figcaption><span>01</span><b data-i18n="gallery_main">รุ่งอรุณเหนือหนองแด</b></figcaption>
+            </figure>
+            <figure class="gallery-small reveal" data-delay="1">
+              <img src="./assets/garden-orchid.webp" alt="Orchid garden in morning light" loading="lazy" />
+              <figcaption><span>02</span><b data-i18n="gallery_orchid">กล้วยไม้ในม่านหมอก</b></figcaption>
+            </figure>
+            <figure class="gallery-small reveal" data-delay="2">
+              <img src="./assets/garden-light.webp" alt="Illuminated night garden" loading="lazy" />
+              <figcaption><span>03</span><b data-i18n="gallery_light">ชีวิตยามค่ำคืน</b></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-section section" id="news">
+        <div class="shell">
+          <div class="news-heading reveal">
+            <div>
+              <p class="eyebrow"><span>07</span><i></i><span data-i18n="news_eyebrow">เรื่องราวล่าสุด</span></p>
+              <h2 data-i18n="news_title">ข่าวสารจากผืนดินที่กำลังเติบโต</h2>
+            </div>
+            <a class="text-link" href="#news">
+              <span data-i18n="view_all">ดูทั้งหมด</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </a>
+          </div>
+
+          <div class="news-grid">
+            <article class="news-card reveal">
+              <div class="news-visual news-green">
+                <span>UDON<br />THANI</span>
+                <i></i>
+                <b>164.8</b>
+              </div>
+              <div class="news-copy">
+                <span data-i18n="news_category_progress">ความคืบหน้า</span>
+                <h3 data-i18n="news_one">หนองแดกำลังเปลี่ยนผ่านสู่พื้นที่เรียนรู้ระดับโลกอย่างไร</h3>
+                <time datetime="2026-06-28">28.06.2026</time>
+              </div>
+            </article>
+            <article class="news-card reveal" data-delay="1">
+              <div class="news-visual news-gold">
+                <span>LOCAL<br />WISDOM</span>
+                <i></i>
+                <b>∞</b>
+              </div>
+              <div class="news-copy">
+                <span data-i18n="news_category_people">ผู้คน</span>
+                <h3 data-i18n="news_two">ภูมิปัญญาอีสานในภาษาการออกแบบร่วมสมัย</h3>
+                <time datetime="2026-06-18">18.06.2026</time>
+              </div>
+            </article>
+            <article class="news-card reveal" data-delay="2">
+              <div class="news-visual news-blue">
+                <span>WETLAND<br />FUTURE</span>
+                <i></i>
+                <b>01</b>
+              </div>
+              <div class="news-copy">
+                <span data-i18n="news_category_nature">ธรรมชาติ</span>
+                <h3 data-i18n="news_three">ทำไมพื้นที่ชุ่มน้ำจึงเป็นคำตอบของเมืองในอนาคต</h3>
+                <time datetime="2026-06-07">07.06.2026</time>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticket-section section" id="tickets">
+        <div class="shell">
+          <div class="ticket-banner reveal">
+            <div class="ticket-glow" aria-hidden="true"></div>
+            <div class="ticket-flower flower-one" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="ticket-flower flower-two" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="ticket-copy">
+              <p class="eyebrow light"><i></i><span data-i18n="ticket_eyebrow">1 พฤศจิกายน 2569 — 14 มีนาคม 2570</span></p>
+              <h2 data-i18n="ticket_title_html" data-i18n-html>เตรียมพบกับ<br /><em>โลกที่กำลังผลิบาน</em></h2>
+              <p data-i18n="ticket_body">ลงทะเบียนเพื่อรับข่าวสารการเปิดจำหน่ายบัตร และเริ่มวางแผนการเดินทางของคุณ</p>
+              <div class="ticket-actions">
+                <button class="button button-light magnetic" id="ticketButton" type="button">
+                  <span data-i18n="ticket_cta">รับข่าวสารบัตร</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </button>
+                <a class="ticket-plan-link" href="#visit" data-i18n="plan_trip">วางแผนการเดินทาง</a>
+              </div>
+              <small class="demo-note" data-i18n="ticket_note">* ส่วนสาธิตสำหรับผลงานออกแบบ ยังไม่มีการจำหน่ายจริง</small>
+            </div>
+            <div class="ticket-stamp" aria-hidden="true">
+              <div><strong>UDON</strong><span>EXPO · 2026</span><b>01.11</b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit-section section" id="visit">
+        <div class="shell">
+          <div class="section-heading split-heading compact">
+            <div class="reveal">
+              <p class="eyebrow"><span>08</span><i></i><span data-i18n="visit_eyebrow">วางแผนการเดินทาง</span></p>
+              <h2 data-i18n="visit_title_html" data-i18n-html>มาพบกัน<br /><em>ที่อุดรธานี</em></h2>
+            </div>
+            <p class="heading-copy reveal" data-delay="1" data-i18n="visit_intro">
+              พื้นที่ชุ่มน้ำหนองแด ตำบลกุดสระ อำเภอเมือง จังหวัดอุดรธานี
+              เดินทางสะดวกจากสนามบินและใจกลางเมือง
+            </p>
+          </div>
+
+          <div class="visit-layout">
+            <div class="location-map real-map reveal">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=102.793%2C17.445%2C102.837%2C17.482&amp;layer=mapnik&amp;marker=17.4634034%2C102.8152732"
+                title="Interactive map of Nong Dae Wetland, Udon Thani"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <div class="real-map-badge">
+                <i></i>
+                <span data-i18n="real_map">แผนที่จริง · เลื่อนและซูมได้</span>
+              </div>
+            </div>
+
+            <div class="visit-info">
+              <article class="visit-card reveal">
+                <span class="visit-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+                </span>
+                <div>
+                  <small data-i18n="address_label">สถานที่</small>
+                  <h3 data-i18n="address_title">พื้นที่ชุ่มน้ำหนองแด</h3>
+                  <p data-i18n="address_body">ต.กุดสระ อ.เมืองอุดรธานี จ.อุดรธานี 41000</p>
+                </div>
+              </article>
+              <article class="visit-card reveal" data-delay="1">
+                <span class="visit-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16.5 21 4l-7 17-2.8-7.3L3 16.5Z"></path></svg>
+                </span>
+                <div>
+                  <small data-i18n="travel_label">การเดินทาง</small>
+                  <h3 data-i18n="travel_title">20 นาทีจากสนามบิน</h3>
+                  <p data-i18n="travel_body">รถรับส่งสาธารณะและเส้นทางจักรยานเชื่อมต่อพื้นที่งาน</p>
+                </div>
+              </article>
+              <article class="visit-card reveal" data-delay="2">
+                <span class="visit-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+                </span>
+                <div>
+                  <small data-i18n="hours_label">เวลาเปิด</small>
+                  <h3>09:00 — 21:00</h3>
+                  <p data-i18n="hours_body">เปิดทุกวันตลอด 134 วันของมหกรรม</p>
+                </div>
+              </article>
+              <a
+                class="button button-outline"
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=17.4634034%2C102.8152732"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span data-i18n="open_maps">เปิดใน Google Maps</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sponsor-section">
+        <div class="shell">
+          <p data-i18n="supported_by">ด้วยความร่วมมือจาก</p>
+          <div class="sponsor-row">
+            <span><b>MOAC</b><small>กระทรวงเกษตรฯ</small></span>
+            <span><b>DOA</b><small>กรมวิชาการเกษตร</small></span>
+            <span><b>UDON</b><small>จังหวัดอุดรธานี</small></span>
+            <span><b>TCEB</b><small>Thailand MICE</small></span>
+            <span><b>AIPH</b><small>Green City</small></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-orb" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand large" href="#home">
+              <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span>
+              <span class="brand-type"><strong>UDON THANI</strong><small>EXPO 2026</small></span>
+            </a>
+            <p data-i18n="footer_tagline">ความหลากหลายแห่งสรรพชีวิต<br />เพื่ออนาคตที่เราเติบโตไปด้วยกัน</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <strong data-i18n="footer_explore">สำรวจ</strong>
+              <a href="#about" data-i18n="nav_about">เรื่องราว</a>
+              <a href="#map" data-i18n="nav_map">พื้นที่จัดงาน</a>
+              <a href="#gardens" data-i18n="nav_gardens">สวนเด่น</a>
+              <a href="#events" data-i18n="nav_events">กิจกรรม</a>
+            </div>
+            <div>
+              <strong data-i18n="footer_visit">การเข้าชม</strong>
+              <a href="#tickets" data-i18n="nav_tickets">บัตรเข้าชม</a>
+              <a href="#visit" data-i18n="nav_visit">วางแผนเที่ยว</a>
+              <a href="#visit" data-i18n="footer_access">การเดินทาง</a>
+              <a href="#news" data-i18n="news_eyebrow">เรื่องราวล่าสุด</a>
+            </div>
+            <div>
+              <strong data-i18n="footer_connect">ติดตามเรา</strong>
+              <a href="#footer">Facebook</a>
+              <a href="#footer">Instagram</a>
+              <a href="#footer">YouTube</a>
+              <a href="#footer">TikTok</a>
+            </div>
+          </div>
+          <div class="newsletter">
+            <strong data-i18n="newsletter_title">รับข่าวสารจากมหกรรม</strong>
+            <p data-i18n="newsletter_body">เรื่องราว กิจกรรม และข่าวสารล่าสุดส่งตรงถึงคุณ</p>
+            <form id="newsletterForm">
+              <label class="sr-only" for="newsletterEmail">Email</label>
+              <input id="newsletterEmail" type="email" placeholder="your@email.com" required />
+              <button type="submit" aria-label="Subscribe">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </button>
+            </form>
+            <span class="form-feedback" id="newsletterFeedback" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="footer-bottom" id="footer">
+          <span>© 2026 UDON THANI EXPO — STUDENT CONCEPT PROJECT</span>
+          <div><a href="#footer" data-i18n="privacy">ความเป็นส่วนตัว</a><a href="#footer" data-i18n="terms">ข้อกำหนด</a></div>
+          <a class="back-top" href="#home"><span data-i18n="back_top">กลับขึ้นด้านบน</span><i>↑</i></a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="story-modal" id="storyModal">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="story-dialog glass">
+        <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+        <div class="story-visual">
+          <img src="./assets/hero-wetland.webp" alt="" />
+          <span class="story-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5Z"></path></svg></span>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow small"><i></i><span>THE STORY</span></p>
+          <h2 data-i18n="modal_story_title">เมื่อพื้นที่ชุ่มน้ำกลายเป็นห้องเรียนของโลก</h2>
+          <p data-i18n="modal_story_body">
+            ตัวอย่างแนวคิดวิดีโอนำเสนอเรื่องราวของผู้คน สายน้ำ และพืชพรรณ
+            ซึ่งจะเชื่อมทุกประสบการณ์ภายในงานเข้าด้วยกัน
+          </p>
+          <small data-i18n="modal_demo">วิดีโอตัวอย่างสำหรับต้นแบบเว็บไซต์</small>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="ticket-modal" id="ticketModal">
+      <div class="modal-backdrop" data-close-modal></div>
+      <form class="ticket-dialog glass" id="ticketForm">
+        <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+        <p class="eyebrow small"><i></i><span data-i18n="ticket_modal_eyebrow">TICKET UPDATE</span></p>
+        <h2 data-i18n="ticket_modal_title">รับข่าวสารเมื่อเปิดจำหน่ายบัตร</h2>
+        <p data-i18n="ticket_modal_body">กรอกข้อมูลเพื่อทดลองการทำงานของแบบฟอร์ม ข้อมูลจะไม่ถูกส่งออกจากอุปกรณ์นี้</p>
+        <label>
+          <span data-i18n="name_label">ชื่อของคุณ</span>
+          <input name="name" type="text" data-i18n-placeholder="name_placeholder" placeholder="ชื่อ–นามสกุล" required />
+        </label>
+        <label>
+          <span data-i18n="email_label">อีเมล</span>
+          <input name="email" type="email" placeholder="your@email.com" required />
+        </label>
+        <label>
+          <span data-i18n="interest_label">สิ่งที่คุณสนใจ</span>
+          <select name="interest">
+            <option value="day" data-i18n="interest_day">บัตรเข้าชมรายวัน</option>
+            <option value="family" data-i18n="interest_family">แพ็กเกจครอบครัว</option>
+            <option value="expo" data-i18n="interest_expo">บัตร Expo Pass</option>
+          </select>
+        </label>
+        <button class="button button-primary" type="submit">
+          <span data-i18n="submit_interest">ลงทะเบียนความสนใจ</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </button>
+        <span class="form-feedback" id="ticketFeedback" aria-live="polite"></span>
+      </form>
+    </dialog>
+
+    <script src="./script.js?v=4"></script>
+  </body>
+</html>
