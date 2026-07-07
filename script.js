@@ -622,6 +622,464 @@ const schedules = {
   },
 };
 
+const officialContent = {
+  th: {
+    nav_about: "แนวคิด",
+    nav_map: "Expo Site",
+    nav_gardens: "พื้นที่จัดแสดง",
+    nav_events: "ข่าวสาร",
+    nav_visit: "การเดินทาง",
+    nav_tickets: "Exhibitors",
+    hero_kicker: "UDON THANI INTERNATIONAL HORTICULTURAL EXPO 2026",
+    hero_title_top: "Diversity",
+    hero_title_bottom: "of Life",
+    hero_lead:
+      "ความหลากหลายแห่งสรรพชีวิต: สายสัมพันธ์แห่งผู้คน สายน้ำ และพืชพรรณ สู่การดำรงชีวิตที่ยั่งยืน",
+    hero_explore: "Explore the Expo",
+    hero_story: "ดูคู่มือ Exhibitors",
+    countdown_label: "Countdown to International Horticultural Expo 2026",
+    countdown_date: "1 พฤศจิกายน 2569 - 14 มีนาคม 2570",
+    location_title: "Udon Thani, Thailand",
+    location_sub: "หนองแด ตำบลกุดสระ อำเภอเมืองอุดรธานี พื้นที่รวม 164.8 เฮกตาร์",
+    about_eyebrow: "แนวคิดหลักของงาน",
+    about_title_html: "Diversity of Life:<br /><em>ความหลากหลายแห่งสรรพชีวิต</em>",
+    about_body:
+      "งานมหกรรมพืชสวนโลกจังหวัดอุดรธานี พ.ศ. 2569 สะท้อนวิสัยทัศน์ของโลกที่อยู่ร่วมกันอย่างกลมเกลียว แบ่งปันความอุดมสมบูรณ์จากแม่น้ำอันยิ่งใหญ่ ฟื้นสายสัมพันธ์แห่งมิตรภาพสู่อนุภูมิภาคลุ่มแม่น้ำโขง และเป็นงานพืชสวนโลกบนพื้นที่ชุ่มน้ำครั้งแรกของโลก",
+    discover_story: "อ่านแนวคิดงาน",
+    pillar_water: "สายน้ำ",
+    pillar_water_body: "แบ่งปันความอุดมสมบูรณ์จากแม่น้ำและพื้นที่ชุ่มน้ำหนองแด สู่การใช้ชีวิตอย่างยั่งยืน",
+    pillar_people: "ผู้คน",
+    pillar_people_body: "ฟื้นสายสัมพันธ์แห่งมิตรภาพของผู้คนในอนุภูมิภาคลุ่มแม่น้ำโขงและนานาชาติ",
+    pillar_plants: "พืชพรรณ",
+    pillar_plants_body: "นำเสนอความหลากหลายทางธรรมชาติ พืชสวน และแรงบันดาลใจเพื่ออนาคต",
+    stat_days: "วันจัดงาน",
+    stat_area: "เฮกตาร์ พื้นที่หนองแด",
+    stat_nations: "พื้นที่สวนนานาชาติ",
+    stat_visitors: "นิทรรศการและกิจกรรม",
+    map_eyebrow: "Explore the Expo",
+    map_title_html: "Expo Site<br /><em>พื้นที่จัดงานที่หนองแด</em>",
+    map_intro:
+      "สำรวจผังพื้นที่มหกรรมพืชสวนโลก อุดรธานี 2569 ผ่านโซนจัดแสดง นิทรรศการ อาคารต้อนรับ สวนนานาชาติ และแลนด์มาร์กที่ได้แรงบันดาลใจจากอัตลักษณ์จังหวัดอุดรธานี",
+    map_interactive: "Interactive Expo Site",
+    selected_zone: "พื้นที่ที่เลือก",
+    zone_welcome_short: "Welcome Hub",
+    zone_wetland_short: "Wetland",
+    zone_world_short: "International Garden",
+    zone_biodome_short: "Landmark",
+    gardens_eyebrow: "พื้นที่จัดแสดง",
+    gardens_title_html: "นิทรรศการ สวน และแลนด์มาร์ก<br /><em>ในมหกรรมพืชสวนโลก</em>",
+    gardens_intro:
+      "เว็บไซต์ต้นฉบับนำเสนอพื้นที่จัดงานในรูปแบบ Expo Site พร้อมแผนที่ สวนนานาชาติ อาคารต้อนรับ และภาพจำลองบรรยากาศภายในงาน",
+    garden_orchid_tag: "EXPO SITE",
+    garden_orchid_title: "อาคารต้อนรับหลัก",
+    garden_orchid_body:
+      "ทำหน้าที่เป็นศูนย์ต้อนรับหลัก ให้ข้อมูลและอำนวยความสะดวกแก่ผู้เข้าชม รวมถึงแขก VIP และเป็นพื้นที่รอรถบริการภายในงาน",
+    garden_wetland_tag: "NONG DAE WETLAND",
+    garden_wetland_title: "พื้นที่ชุ่มน้ำหนองแด",
+    garden_wetland_body:
+      "พื้นที่จัดงาน ณ หนองแด ตำบลกุดสระ อำเภอเมืองอุดรธานี รวม 164.8 เฮกตาร์ เชื่อมธรรมชาติ สายน้ำ และการเรียนรู้",
+    garden_light_tag: "LANDMARK",
+    garden_light_title: "แลนด์มาร์กแรงบันดาลใจจากวัดป่าภูก้อน",
+    garden_light_body:
+      "โครงสร้างที่สะท้อนศูนย์รวมศรัทธาและวิถีพุทธของชาวอุดรธานี สร้างภาพจำสำคัญภายในพื้นที่จัดงาน",
+    nations_eyebrow: "International Garden",
+    nations_title_html: "สวนนานาชาติ<br /><em>ความร่วมมือจากทั่วโลก</em>",
+    nations_body:
+      "พื้นที่สวนนานาชาติเปิดโอกาสให้ประเทศและองค์กรต่าง ๆ นำเสนอพืชสวน วัฒนธรรม และแนวคิดการอยู่ร่วมกับธรรมชาติ",
+    nations_note: "",
+    events_eyebrow: "Latest News",
+    events_title_html: "ข่าวสารล่าสุด<br /><em>จากงานมหกรรมพืชสวนโลก</em>",
+    events_intro: "อัปเดตความร่วมมือ สวนนานาชาติ ความคืบหน้าการจัดงาน และกิจกรรมเตรียมความพร้อมของ Udon Thani Expo 2026",
+    daily_eyebrow: "Exhibitors",
+    daily_title: "คู่มือผู้เข้าร่วมจัดสวนและนิทรรศการ",
+    gallery_eyebrow: "Gallery",
+    gallery_title_html: "ภาพบรรยากาศ<br /><em>จากแนวคิด Expo Site</em>",
+    gallery_main: "พื้นที่ชุ่มน้ำหนองแด จังหวัดอุดรธานี",
+    gallery_orchid: "สวนนานาชาติและนิทรรศการพืชสวน",
+    gallery_light: "แลนด์มาร์กและพื้นที่กิจกรรมภายในงาน",
+    news_eyebrow: "Latest News",
+    news_title: "ข่าวสารจากเว็บไซต์ทางการ",
+    news_category_progress: "ข่าวสาร",
+    news_category_people: "ข่าวสาร",
+    news_category_nature: "ข่าวสาร",
+    news_one: "ไทย–ภูฏาน เดินหน้าความร่วมมือ เตรียมจัดสวนนานาชาติในงานมหกรรมพืชสวนโลก จังหวัดอุดรธานี พ.ศ. 2569",
+    news_two: "สำนักงานมหกรรมพืชสวนโลกหารือความร่วมมือการจัดสวนนานาชาติกับประเทศเนปาล",
+    news_three: "กรมวิชาการเกษตรนำเสนอรายงานความก้าวหน้าการจัดงานมหกรรมพืชสวนโลก จังหวัดอุดรธานี พ.ศ. 2569 ต่อ AIPH",
+    ticket_eyebrow: "1 พฤศจิกายน 2569 — 14 มีนาคม 2570",
+    ticket_title_html: "ร่วมเป็นส่วนหนึ่ง<br /><em>ของมหกรรมพืชสวนโลก</em>",
+    ticket_body:
+      "ขอเรียนเชิญผู้เข้าร่วมจัดสวนและนิทรรศการเข้าร่วมเป็นส่วนหนึ่งในงานมหกรรมพืชสวนโลกจังหวัดอุดรธานี พ.ศ. 2569 พร้อมดาวน์โหลดคู่มือและระเบียบการสำหรับ Exhibitors",
+    ticket_cta: "ดาวน์โหลดคู่มือ",
+    plan_trip: "วางแผนเดินทาง",
+    ticket_note: "* แบบฟอร์มนี้เป็นส่วนสาธิตสำหรับเว็บไซต์นักศึกษา ไม่ใช่ระบบลงทะเบียนจริงของหน่วยงาน",
+    visit_eyebrow: "Visit Udon Thani",
+    visit_title_html: "เดินทางสู่อุดรธานี<br /><em>และพื้นที่หนองแด</em>",
+    visit_intro:
+      "พื้นที่จัดงานตั้งอยู่ที่หนองแด ตำบลกุดสระ อำเภอเมือง จังหวัดอุดรธานี โดยการเดินทางจากกรุงเทพฯ ไปอุดรธานีมีทั้งเครื่องบิน รถยนต์ และรถไฟ",
+    address_title: "หนองแด ตำบลกุดสระ",
+    address_body: "อำเภอเมืองอุดรธานี จังหวัดอุดรธานี พื้นที่รวม 164.8 เฮกตาร์",
+    travel_title: "เดินทางจากกรุงเทพฯ สู่อุดรธานี",
+    travel_body: "โดยเครื่องบินประมาณ 1 ชั่วโมง, รถยนต์ประมาณ 7 ชั่วโมง และรถไฟประมาณ 9 ชั่วโมง",
+    hours_body: "จัดงานระหว่างวันที่ 1 พฤศจิกายน 2569 ถึง 14 มีนาคม 2570",
+    footer_tagline: "Diversity of Life<br />ความหลากหลายแห่งสรรพชีวิต"
+  },
+  en: {
+    nav_about: "Theme",
+    nav_map: "Expo Site",
+    nav_gardens: "Exhibitions",
+    nav_events: "News",
+    nav_visit: "Visit",
+    nav_tickets: "Exhibitors",
+    hero_kicker: "UDON THANI INTERNATIONAL HORTICULTURAL EXPO 2026",
+    hero_title_top: "Diversity",
+    hero_title_bottom: "of Life",
+    hero_lead:
+      "Udon Thani International Horticultural Expo 2026 projects a clear vision of the world living in harmony, sharing fertility from the great river and revitalizing companionship in the Greater Mekong Subregion.",
+    hero_story: "Exhibitor Guidebook",
+    countdown_label: "Countdown to International Horticultural Expo 2026",
+    countdown_date: "1 November 2026 - 14 March 2027",
+    location_title: "Udon Thani, Thailand",
+    location_sub: "Nong Dae, Kut Sa Sub-district, Mueang district · Total site area 164.8 hectares",
+    about_eyebrow: "Official theme",
+    about_title_html: "Diversity of Life:<br /><em>people, water and plants</em>",
+    about_body:
+      "The Expo marks the world’s inaugural horticultural expo on wetland areas, presenting a future where communities, water resources and plant life coexist sustainably.",
+    pillar_water_body: "Share the fertility of the great river and the Nong Dae wetland as a living foundation for sustainability.",
+    pillar_people_body: "Revitalize companionship across the Greater Mekong Subregion and the international horticultural community.",
+    pillar_plants_body: "Celebrate biodiversity, horticultural knowledge and inspiration from nature for the future.",
+    stat_days: "days of Expo",
+    stat_area: "hectares at Nong Dae",
+    stat_nations: "international garden areas",
+    stat_visitors: "exhibitions and activities",
+    map_title_html: "Expo Site<br /><em>Nong Dae Wetland</em>",
+    map_intro:
+      "Explore the vibrant landscape of Udon Thani International Horticultural Expo 2026 through exhibition zones, a welcome hub, international gardens and Udon Thani-inspired landmarks.",
+    zone_welcome_short: "Welcome Hub",
+    zone_wetland_short: "Wetland Site",
+    zone_world_short: "International Garden",
+    zone_biodome_short: "Landmark",
+    gardens_title_html: "Exhibition zones<br /><em>gardens and landmarks</em>",
+    gardens_intro:
+      "The official site presents the Expo through an interactive master plan, international gardens, a main welcome building and rendered gallery images.",
+    garden_orchid_tag: "EXPO SITE",
+    garden_orchid_title: "Main Welcome Hub",
+    garden_orchid_body:
+      "The main welcome hub provides information and assistance to guests, including VIP attendees, and serves as a waiting area for shuttle services inside the Expo grounds.",
+    garden_wetland_tag: "NONG DAE WETLAND",
+    garden_wetland_title: "Nong Dae Wetland",
+    garden_wetland_body:
+      "The Expo takes place at Nong Dae, Kut Sa Sub-district, Mueang district, Udon Thani, with a total site area of 164.8 hectares.",
+    garden_light_tag: "LANDMARK",
+    garden_light_title: "Wat Pa Phu Kon-inspired landmark",
+    garden_light_body:
+      "A structure inspired by Wat Pa Phu Kon reflects a centre of faith and the Buddhist way of life of Udon Thani people.",
+    nations_eyebrow: "International Garden",
+    nations_title_html: "International gardens<br /><em>global cooperation</em>",
+    nations_body:
+      "The international garden areas invite countries and organisations to present horticulture, culture and sustainable ways of living with nature.",
+    nations_note: "",
+    events_eyebrow: "Latest News",
+    events_title_html: "Official updates<br /><em>from the Expo</em>",
+    events_intro: "Follow cooperation updates, international garden discussions, progress reports and preparation activities for Udon Thani Expo 2026.",
+    daily_eyebrow: "Exhibitors",
+    daily_title: "Exhibitor guidebook and regulations",
+    gallery_title_html: "Gallery<br /><em>from the Expo Site concept</em>",
+    gallery_main: "Nong Dae Wetland, Udon Thani",
+    gallery_orchid: "International gardens and horticultural exhibitions",
+    gallery_light: "Landmarks and activity spaces",
+    news_title: "News from the official website",
+    news_one: "Thailand and Bhutan move forward with cooperation to prepare international gardens for Udon Thani Expo 2026",
+    news_two: "The Expo office discusses international garden cooperation with Nepal",
+    news_three: "Department of Agriculture presents Udon Thani Expo 2026 progress report to AIPH",
+    ticket_title_html: "Join<br /><em>Udon Thani Expo 2026</em>",
+    ticket_body:
+      "Exhibitors are welcomed to participate in Udon Thani International Horticultural Expo 2026. The official site provides general regulations in Thai, English and Chinese.",
+    ticket_cta: "Download guidebook",
+    ticket_note: "* This form is a student website demo and is not the official registration system.",
+    visit_intro:
+      "The Expo site is located at Nong Dae, Kut Sa Sub-district, Mueang district, Udon Thani. Travel from Bangkok to Udon Thani is available by air, car and train.",
+    address_title: "Nong Dae, Kut Sa Sub-district",
+    address_body: "Mueang Udon Thani district, Udon Thani · Total site area 164.8 hectares",
+    travel_title: "Bangkok to Udon Thani",
+    travel_body: "By air about 1 hour, by car about 7 hours, and by train about 9 hours.",
+    hours_body: "Open from 1 November 2026 to 14 March 2027.",
+    footer_tagline: "Diversity of Life<br />Udon Thani International Horticultural Expo 2026"
+  },
+  zh: {
+    nav_about: "主题",
+    nav_map: "园区",
+    nav_gardens: "展区",
+    nav_events: "新闻",
+    nav_visit: "交通",
+    nav_tickets: "参展者",
+    hero_kicker: "乌隆他尼国际园艺博览会 2026",
+    hero_title_top: "生命",
+    hero_title_bottom: "多样性",
+    hero_lead:
+      "乌隆他尼国际园艺博览会 2026 展现人与自然和谐共生的愿景，分享大河带来的丰饶，并重建大湄公河次区域的友谊联系。",
+    hero_story: "参展者指南",
+    countdown_label: "距离乌隆他尼国际园艺博览会开幕",
+    countdown_date: "2026年11月1日 - 2027年3月14日",
+    location_title: "泰国乌隆他尼",
+    location_sub: "农代湿地，谷沙镇，乌隆他尼府直辖县 · 总面积164.8公顷",
+    about_eyebrow: "官方主题",
+    about_title_html: "生命多样性：<br /><em>人与水、植物的联系</em>",
+    about_body:
+      "本届博览会是世界首个在湿地举办的国际园艺博览会，呈现社区、水资源与植物生命可持续共生的未来愿景。",
+    pillar_water_body: "以大河与农代湿地的丰饶为基础，展示可持续生活的可能。",
+    pillar_people_body: "连接大湄公河次区域与国际园艺社群，重建友谊与合作。",
+    pillar_plants_body: "展示生物多样性、园艺知识，以及来自自然的未来灵感。",
+    stat_days: "天展期",
+    stat_area: "公顷农代湿地园区",
+    stat_nations: "国际花园区域",
+    stat_visitors: "展览与活动",
+    map_title_html: "园区规划<br /><em>农代湿地</em>",
+    map_intro:
+      "通过展区、迎宾中心、国际花园与乌隆他尼特色地标，探索乌隆他尼国际园艺博览会 2026 的园区景观。",
+    zone_welcome_short: "迎宾中心",
+    zone_wetland_short: "湿地园区",
+    zone_world_short: "国际花园",
+    zone_biodome_short: "地标",
+    gardens_title_html: "展区、花园<br /><em>与地标空间</em>",
+    gardens_intro:
+      "官方网站以互动总平面图、国际花园、主迎宾建筑和效果图库呈现博览会园区。",
+    garden_orchid_tag: "园区",
+    garden_orchid_title: "主迎宾中心",
+    garden_orchid_body:
+      "主迎宾中心为游客和贵宾提供信息与协助，同时也是园区接驳车的等候空间。",
+    garden_wetland_tag: "农代湿地",
+    garden_wetland_title: "农代湿地",
+    garden_wetland_body:
+      "博览会位于乌隆他尼府直辖县谷沙镇农代湿地，总面积164.8公顷。",
+    garden_light_tag: "地标",
+    garden_light_title: "受帕普空寺启发的地标",
+    garden_light_body:
+      "该建筑灵感来自帕普空寺，体现乌隆他尼人民的信仰中心与佛教生活方式。",
+    nations_eyebrow: "国际花园",
+    nations_title_html: "国际花园<br /><em>全球合作</em>",
+    nations_body:
+      "国际花园邀请各国和机构展示园艺、文化与可持续的自然共生方式。",
+    nations_note: "",
+    events_eyebrow: "最新新闻",
+    events_title_html: "官方动态<br /><em>乌隆他尼世园会</em>",
+    events_intro: "关注国际花园合作、项目进展报告和乌隆他尼世园会 2026 的筹备动态。",
+    daily_eyebrow: "参展者",
+    daily_title: "参展者指南与规定",
+    gallery_title_html: "图库<br /><em>园区概念效果</em>",
+    gallery_main: "乌隆他尼农代湿地",
+    gallery_orchid: "国际花园与园艺展览",
+    gallery_light: "地标与活动空间",
+    news_title: "官方网站新闻",
+    news_one: "泰国与不丹推进合作，筹备乌隆他尼世园会国际花园",
+    news_two: "世园会办公室与尼泊尔讨论国际花园合作",
+    news_three: "农业厅向 AIPH 汇报乌隆他尼世园会 2026 项目进展",
+    ticket_title_html: "加入<br /><em>乌隆他尼世园会 2026</em>",
+    ticket_body:
+      "官方欢迎参展者参加乌隆他尼国际园艺博览会 2026，并提供泰文、英文和中文的一般规定下载。",
+    ticket_cta: "下载指南",
+    ticket_note: "* 此表单为学生作品演示，并非官方报名系统。",
+    visit_intro:
+      "园区位于乌隆他尼府直辖县谷沙镇农代湿地。从曼谷前往乌隆他尼可选择飞机、汽车或火车。",
+    address_title: "农代湿地，谷沙镇",
+    address_body: "乌隆他尼府直辖县 · 总面积164.8公顷",
+    travel_title: "曼谷至乌隆他尼",
+    travel_body: "飞机约1小时，汽车约7小时，火车约9小时。",
+    hours_body: "展期为2026年11月1日至2027年3月14日。",
+    footer_tagline: "生命多样性<br />乌隆他尼国际园艺博览会 2026"
+  }
+};
+
+Object.entries(officialContent).forEach(([language, content]) => {
+  Object.assign(translations[language], content);
+});
+
+const officialZones = {
+  th: {
+    welcome: {
+      number: "01",
+      title: "Main Welcome Hub",
+      description: "อาคารต้อนรับหลัก ให้ข้อมูลและอำนวยความสะดวกแก่ผู้เข้าชม รวมถึงแขก VIP และเป็นพื้นที่รอรถบริการภายในงาน",
+      time: "จุดต้อนรับ",
+      stops: "ข้อมูล / VIP / Shuttle"
+    },
+    wetland: {
+      number: "02",
+      title: "Nong Dae Wetland",
+      description: "พื้นที่ชุ่มน้ำหนองแด ตำบลกุดสระ อำเภอเมืองอุดรธานี เป็นพื้นที่จัดงานรวม 164.8 เฮกตาร์",
+      time: "164.8 เฮกตาร์",
+      stops: "พื้นที่หลักของงาน"
+    },
+    world: {
+      number: "03",
+      title: "International Garden",
+      description: "พื้นที่สวนนานาชาติสำหรับประเทศและองค์กรต่าง ๆ นำเสนอแนวคิดด้านพืชสวน วัฒนธรรม และความยั่งยืน",
+      time: "สวนนานาชาติ",
+      stops: "นิทรรศการ"
+    },
+    biodome: {
+      number: "04",
+      title: "Udon Thani Landmark",
+      description: "แลนด์มาร์กที่ได้แรงบันดาลใจจากวัดป่าภูก้อน สะท้อนศรัทธาและวิถีพุทธของชาวอุดรธานี",
+      time: "แลนด์มาร์ก",
+      stops: "จุดถ่ายภาพ"
+    }
+  },
+  en: {
+    welcome: {
+      number: "01",
+      title: "Main Welcome Hub",
+      description: "The main welcome hub provides information and assistance to all guests, including VIP attendees, and serves as a waiting area for shuttle services.",
+      time: "Welcome",
+      stops: "Info / VIP / Shuttle"
+    },
+    wetland: {
+      number: "02",
+      title: "Nong Dae Wetland",
+      description: "The Expo site is located at Nong Dae, Kut Sa Sub-district, Mueang district, Udon Thani, with a total site area of 164.8 hectares.",
+      time: "164.8 ha",
+      stops: "Main site"
+    },
+    world: {
+      number: "03",
+      title: "International Garden",
+      description: "International garden areas invite countries and organisations to present horticulture, culture and sustainable ideas.",
+      time: "Global gardens",
+      stops: "Exhibitions"
+    },
+    biodome: {
+      number: "04",
+      title: "Udon Thani Landmark",
+      description: "A landmark inspired by Wat Pa Phu Kon, reflecting a centre of faith and the Buddhist way of life of Udon Thani people.",
+      time: "Landmark",
+      stops: "Photo point"
+    }
+  },
+  zh: {
+    welcome: {
+      number: "01",
+      title: "主迎宾中心",
+      description: "主迎宾中心为游客和贵宾提供信息与协助，同时作为园区接驳车等候空间。",
+      time: "迎宾",
+      stops: "信息 / 贵宾 / 接驳"
+    },
+    wetland: {
+      number: "02",
+      title: "农代湿地",
+      description: "园区位于乌隆他尼府直辖县谷沙镇农代湿地，总面积164.8公顷。",
+      time: "164.8公顷",
+      stops: "主园区"
+    },
+    world: {
+      number: "03",
+      title: "国际花园",
+      description: "国际花园邀请各国和机构展示园艺、文化与可持续发展理念。",
+      time: "国际花园",
+      stops: "展览"
+    },
+    biodome: {
+      number: "04",
+      title: "乌隆他尼地标",
+      description: "地标灵感来自帕普空寺，体现乌隆他尼人民的信仰中心与佛教生活方式。",
+      time: "地标",
+      stops: "拍照点"
+    }
+  }
+};
+
+Object.entries(officialZones).forEach(([language, languageZones]) => {
+  Object.entries(languageZones).forEach(([zone, content]) => {
+    Object.assign(zones[language][zone], content);
+  });
+});
+
+const officialEvents = {
+  th: {
+    opening: { tag: "ข่าวสาร", title: "ไทย–ภูฏาน เดินหน้าความร่วมมือ", body: "เตรียมจัดสวนนานาชาติในงานมหกรรมพืชสวนโลก จังหวัดอุดรธานี พ.ศ. 2569", date: "26.06.2569", time: "Latest News" },
+    culture: { tag: "ข่าวสาร", title: "หารือความร่วมมือกับประเทศเนปาล", body: "สำนักงานมหกรรมพืชสวนโลกหารือการจัดสวนนานาชาติกับประเทศเนปาล", date: "16.06.2569", time: "International Garden" },
+    light: { tag: "ความคืบหน้า", title: "รายงานความก้าวหน้าต่อ AIPH", body: "กรมวิชาการเกษตรนำเสนอรายงานความก้าวหน้าการจัดงานมหกรรมพืชสวนโลก จังหวัดอุดรธานี พ.ศ. 2569 ต่อสมาคมพืชสวนระหว่างประเทศ", date: "29.05.2569", time: "AIPH" },
+    future: { tag: "ความพร้อม", title: "ความพร้อมงานคืบหน้ากว่า 77%", body: "รัฐมนตรีว่าการกระทรวงเกษตรฯ ลงพื้นที่ติดตามความพร้อมงานมหกรรมพืชสวนโลก อุดรธานี 2569", date: "26.05.2569", time: "Progress" },
+    closing: { tag: "Exhibitors", title: "คู่มือผู้เข้าร่วมจัดสวนและนิทรรศการ", body: "ผู้เข้าร่วมจัดสวนและนิทรรศการสามารถดาวน์โหลดระเบียบทั่วไปภาษาไทย อังกฤษ และจีนได้จากเว็บไซต์ทางการ", date: "2026", time: "Guidebook" }
+  },
+  en: {
+    opening: { tag: "NEWS", title: "Thailand–Bhutan cooperation moves forward", body: "Preparing international gardens for Udon Thani International Horticultural Expo 2026.", date: "26.06.2026", time: "Latest News" },
+    culture: { tag: "NEWS", title: "Cooperation talks with Nepal", body: "The Expo office discusses international garden cooperation with Nepal.", date: "16.06.2026", time: "International Garden" },
+    light: { tag: "PROGRESS", title: "Progress report presented to AIPH", body: "The Department of Agriculture presents the progress report for Udon Thani Expo 2026 to the International Association of Horticultural Producers.", date: "29.05.2026", time: "AIPH" },
+    future: { tag: "READINESS", title: "Expo preparation progress exceeds 77%", body: "The Minister of Agriculture visits Udon Thani to follow up on Expo readiness.", date: "26.05.2026", time: "Progress" },
+    closing: { tag: "EXHIBITORS", title: "Exhibitor guidebook and regulations", body: "General regulations are available in Thai, English and Chinese on the official website.", date: "2026", time: "Guidebook" }
+  },
+  zh: {
+    opening: { tag: "新闻", title: "泰国与不丹推进合作", body: "为乌隆他尼国际园艺博览会 2026 筹备国际花园。", date: "2026.06.26", time: "最新新闻" },
+    culture: { tag: "新闻", title: "与尼泊尔讨论合作", body: "世园会办公室与尼泊尔讨论国际花园合作。", date: "2026.06.16", time: "国际花园" },
+    light: { tag: "进展", title: "向 AIPH 汇报项目进展", body: "农业厅向国际园艺生产者协会汇报乌隆他尼世园会 2026 进展。", date: "2026.05.29", time: "AIPH" },
+    future: { tag: "筹备", title: "筹备进度超过77%", body: "农业部长赴乌隆他尼跟进世园会筹备情况。", date: "2026.05.26", time: "进展" },
+    closing: { tag: "参展者", title: "参展者指南与规定", body: "官方网站提供泰文、英文和中文的一般规定下载。", date: "2026", time: "指南" }
+  }
+};
+
+Object.entries(officialEvents).forEach(([language, languageEvents]) => {
+  Object.entries(languageEvents).forEach(([eventName, content]) => {
+    Object.assign(events[language][eventName], content);
+  });
+});
+
+const officialSchedules = {
+  th: {
+    morning: [
+      ["01", "ดาวน์โหลดระเบียบทั่วไป", "ภาษาไทย / English / Chinese"],
+      ["02", "จัดเตรียมพื้นที่จัดสวนและนิทรรศการ", "มาตรฐานคุณภาพตลอดระยะเวลาจัดแสดง"],
+      ["03", "ดูแลรักษาพื้นที่ที่ได้รับมอบหมาย", "สำหรับผู้เข้าร่วมจัดสวนและนิทรรศการ"]
+    ],
+    afternoon: [
+      ["Air", "กรุงเทพฯ - อุดรธานี", "เดินทางโดยเครื่องบินประมาณ 1 ชั่วโมง"],
+      ["Car", "กรุงเทพฯ - อุดรธานี", "เดินทางโดยรถยนต์ประมาณ 7 ชั่วโมง"],
+      ["Train", "กรุงเทพฯ - อุดรธานี", "เดินทางโดยรถไฟประมาณ 9 ชั่วโมง"]
+    ],
+    evening: [
+      ["Visit", "เที่ยวอุดรธานี", "แหล่งท่องเที่ยว วัฒนธรรม ธรรมชาติ และเทศกาล"],
+      ["Map", "ดูแผนที่หนองแด", "เปิดพิกัดพื้นที่จัดงานบน Google Maps"],
+      ["Expo", "1 พ.ย. 2569 - 14 มี.ค. 2570", "มหกรรมพืชสวนโลก อุดรธานี 2569"]
+    ]
+  },
+  en: {
+    morning: [
+      ["01", "Download general regulations", "Thai / English / Chinese"],
+      ["02", "Prepare exhibition and garden areas", "Maintain quality standards throughout the Expo"],
+      ["03", "Maintain assigned areas", "For exhibitors and garden participants"]
+    ],
+    afternoon: [
+      ["Air", "Bangkok to Udon Thani", "By air about 1 hour"],
+      ["Car", "Bangkok to Udon Thani", "By car about 7 hours"],
+      ["Train", "Bangkok to Udon Thani", "By train about 9 hours"]
+    ],
+    evening: [
+      ["Visit", "Visit Udon Thani", "Culture, nature, attractions and festivals"],
+      ["Map", "See Nong Dae on map", "Open the Expo location in Google Maps"],
+      ["Expo", "1 Nov 2026 - 14 Mar 2027", "Udon Thani International Horticultural Expo 2026"]
+    ]
+  },
+  zh: {
+    morning: [
+      ["01", "下载一般规定", "泰文 / 英文 / 中文"],
+      ["02", "准备展览与花园区域", "在展期内保持高质量标准"],
+      ["03", "维护指定区域", "面向参展者和花园参与者"]
+    ],
+    afternoon: [
+      ["飞机", "曼谷至乌隆他尼", "约1小时"],
+      ["汽车", "曼谷至乌隆他尼", "约7小时"],
+      ["火车", "曼谷至乌隆他尼", "约9小时"]
+    ],
+    evening: [
+      ["游览", "游览乌隆他尼", "文化、自然、景点与节庆"],
+      ["地图", "查看农代湿地地图", "在 Google 地图打开园区位置"],
+      ["世园会", "2026.11.01 - 2027.03.14", "乌隆他尼国际园艺博览会 2026"]
+    ]
+  }
+};
+
+Object.entries(officialSchedules).forEach(([language, content]) => {
+  Object.assign(schedules[language], content);
+});
+
 const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
 let currentLanguage = translations[requestedLanguage]
   ? requestedLanguage
