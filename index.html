@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=5" />
+    <link rel="stylesheet" href="./styles.css?v=8" />
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">ข้ามไปยังเนื้อหา</a>
@@ -259,15 +259,84 @@
         </div>
       </section>
 
+      <section class="sustainability-section section" id="sustainability">
+        <div class="sustainability-pattern pattern-left" aria-hidden="true"></div>
+        <div class="sustainability-pattern pattern-right" aria-hidden="true"></div>
+        <div class="shell">
+          <div class="sustainability-heading reveal">
+            <span class="flying-bird" aria-hidden="true"></span>
+            <p class="eyebrow"><span>02</span><i></i><span data-i18n="sustainability_eyebrow">ข้อมูลจากเว็บไซต์ทางการ</span></p>
+            <h2 data-i18n="sustainability_title_html" data-i18n-html>
+              Experience Nature,<br />Embrace Sustainability
+            </h2>
+          </div>
+
+          <div class="official-info-grid">
+            <article class="official-info-card reveal">
+              <span class="official-card-number">01</span>
+              <h3 data-i18n="official_theme_title">แนวคิด</h3>
+              <p data-i18n="official_theme_body">
+                ความหลากหลายแห่งสรรพชีวิต: สายสัมพันธ์แห่งผู้คน สายน้ำ และพืชพรรณ สู่การดำรงชีวิตที่ยั่งยืน
+              </p>
+              <a class="official-card-link" href="#about">
+                <span data-i18n="read_more">อ่านเพิ่ม</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+            </article>
+
+            <article class="official-info-card featured reveal" data-delay="1">
+              <span class="official-card-number">02</span>
+              <h3 data-i18n="official_udon_title">จังหวัดอุดรธานี</h3>
+              <p data-i18n="official_udon_body">
+                งานมหกรรมพืชสวนโลกจังหวัดอุดรธานี พ.ศ. 2569 สะท้อนวิสัยทัศน์ของโลกที่อยู่ร่วมกันอย่างกลมเกลียว แบ่งปันความอุดมสมบูรณ์จากแม่น้ำอันยิ่งใหญ่ ฟื้นสายสัมพันธ์แห่งมิตรภาพสู่อนุภาคลุ่มแม่น้ำโขง และเป็นงานพืชสวนโลกบนพื้นที่ชุ่มน้ำครั้งแรกของโลก
+              </p>
+              <a class="official-card-link" href="#visit">
+                <span data-i18n="read_more">อ่านเพิ่ม</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+            </article>
+
+            <article class="official-info-card reveal" data-delay="2">
+              <span class="official-card-number">03</span>
+              <h3 data-i18n="official_exhibitor_title">คู่มือผู้เข้าร่วมจัดสวนและนิทรรศการ</h3>
+              <p data-i18n="official_exhibitor_body">
+                ขอเรียนเชิญจัดสวนและนิทรรศการเข้าร่วมเป็นส่วนหนึ่งในงานมหกรรมพืชสวนโลกจังหวัดอุดรธานี พ.ศ. 2569
+              </p>
+              <a class="official-card-link" href="#tickets">
+                <span data-i18n="exhibitor_guide_cta">คู่มือผู้เข้าร่วม</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="map-section section" id="map">
         <div class="shell">
           <div class="section-heading centered reveal">
-            <p class="eyebrow"><span>02</span><i></i><span data-i18n="map_eyebrow">สำรวจพื้นที่</span></p>
+            <p class="eyebrow"><span>03</span><i></i><span data-i18n="map_eyebrow">สำรวจพื้นที่</span></p>
             <h2 data-i18n="map_title_html" data-i18n-html>หนึ่งพื้นที่<br /><em>หลายโลกให้ค้นพบ</em></h2>
             <p data-i18n="map_intro">
               เลือกโซนบนแผนที่เพื่อสำรวจประสบการณ์ที่เชื่อมต่อกันด้วยสายน้ำและเส้นทางสีเขียว
             </p>
           </div>
+
+          <figure class="official-master-plan reveal">
+            <a href="./assets/expo-master-plan.png" target="_blank" rel="noreferrer" aria-label="Open full Expo master plan image">
+              <img
+                src="./assets/expo-master-plan.png"
+                alt="Official master plan of Udon Thani International Horticultural Expo 2026 with Thai and English labels"
+                loading="lazy"
+              />
+              <span class="master-plan-zoom">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 18a7.5 7.5 0 1 1 5.3-2.2L21 21l-1.8 1.8-5.2-5.2A7.4 7.4 0 0 1 10.5 18Zm0-2.5a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm-1-8h2v2h2v2h-2v2h-2v-2h-2v-2h2v-2Z"></path></svg>
+                <span>Open full map</span>
+              </span>
+            </a>
+            <figcaption>
+              Official Expo master plan · ภาพรวมพื้นที่จัดงานพร้อมอาคารและโซนสำคัญ
+            </figcaption>
+          </figure>
 
           <div class="map-explorer reveal">
             <div class="map-panel glass">
@@ -366,7 +435,7 @@
         <div class="shell">
           <div class="section-heading split-heading compact">
             <div class="reveal">
-              <p class="eyebrow"><span>03</span><i></i><span data-i18n="gardens_eyebrow">ไฮไลต์สวน</span></p>
+            <p class="eyebrow"><span>04</span><i></i><span data-i18n="gardens_eyebrow">ไฮไลต์สวน</span></p>
               <h2 data-i18n="gardens_title_html" data-i18n-html>สวนที่ไม่ได้มีไว้แค่ชม<br /><em>แต่มีไว้ให้รู้สึก</em></h2>
             </div>
             <p class="heading-copy reveal" data-delay="1" data-i18n="gardens_intro">
@@ -421,7 +490,7 @@
       <section class="nations-section">
         <div class="shell">
           <div class="nations-copy reveal">
-            <p class="eyebrow"><span>04</span><i></i><span data-i18n="nations_eyebrow">โลกมาพบกันที่อุดรธานี</span></p>
+            <p class="eyebrow"><span>05</span><i></i><span data-i18n="nations_eyebrow">โลกมาพบกันที่อุดรธานี</span></p>
             <h2 data-i18n="nations_title_html" data-i18n-html>วัฒนธรรมต่างกัน<br /><em>แต่เติบโตใต้ฟ้าเดียวกัน</em></h2>
             <p data-i18n="nations_body">
               ชมแนวคิดสวนและนวัตกรรมพืชสวนจากนานาประเทศ
@@ -436,7 +505,7 @@
         <div class="shell">
           <div class="section-heading split-heading compact">
             <div class="reveal">
-              <p class="eyebrow"><span>05</span><i></i><span data-i18n="events_eyebrow">ปฏิทินประสบการณ์</span></p>
+              <p class="eyebrow"><span>06</span><i></i><span data-i18n="events_eyebrow">ปฏิทินประสบการณ์</span></p>
               <h2 data-i18n="events_title_html" data-i18n-html>ทุกวัน<br /><em>มีสิ่งใหม่ผลิบาน</em></h2>
             </div>
             <p class="heading-copy reveal" data-delay="1" data-i18n="events_intro">
@@ -531,7 +600,7 @@
       <section class="gallery-section section" id="gallery">
         <div class="shell">
           <div class="section-heading centered reveal">
-            <p class="eyebrow"><span>06</span><i></i><span data-i18n="gallery_eyebrow">ภาพแห่งความทรงจำ</span></p>
+            <p class="eyebrow"><span>07</span><i></i><span data-i18n="gallery_eyebrow">ภาพแห่งความทรงจำ</span></p>
             <h2 data-i18n="gallery_title_html" data-i18n-html>เพราะบางความรู้สึก<br /><em>พูดได้ดีกว่าด้วยภาพ</em></h2>
           </div>
           <div class="gallery-grid">
@@ -555,7 +624,7 @@
         <div class="shell">
           <div class="news-heading reveal">
             <div>
-              <p class="eyebrow"><span>07</span><i></i><span data-i18n="news_eyebrow">เรื่องราวล่าสุด</span></p>
+              <p class="eyebrow"><span>08</span><i></i><span data-i18n="news_eyebrow">เรื่องราวล่าสุด</span></p>
               <h2 data-i18n="news_title">ข่าวสารจากผืนดินที่กำลังเติบโต</h2>
             </div>
             <a class="text-link" href="#news">
@@ -635,7 +704,7 @@
         <div class="shell">
           <div class="section-heading split-heading compact">
             <div class="reveal">
-              <p class="eyebrow"><span>08</span><i></i><span data-i18n="visit_eyebrow">วางแผนการเดินทาง</span></p>
+              <p class="eyebrow"><span>09</span><i></i><span data-i18n="visit_eyebrow">วางแผนการเดินทาง</span></p>
               <h2 data-i18n="visit_title_html" data-i18n-html>มาพบกัน<br /><em>ที่อุดรธานี</em></h2>
             </div>
             <p class="heading-copy reveal" data-delay="1" data-i18n="visit_intro">
@@ -824,6 +893,6 @@
       </form>
     </dialog>
 
-    <script src="./script.js?v=5"></script>
+    <script src="./script.js?v=8"></script>
   </body>
 </html>

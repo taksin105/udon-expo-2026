@@ -637,6 +637,19 @@ const officialContent = {
       "ความหลากหลายแห่งสรรพชีวิต: สายสัมพันธ์แห่งผู้คน สายน้ำ และพืชพรรณ สู่การดำรงชีวิตที่ยั่งยืน",
     hero_explore: "Explore the Expo",
     hero_story: "ดูคู่มือ Exhibitors",
+    sustainability_eyebrow: "ข้อมูลจากเว็บไซต์ทางการ",
+    sustainability_title_html: "Experience Nature,<br />Embrace Sustainability",
+    official_theme_title: "แนวคิด",
+    official_theme_body:
+      "ความหลากหลายแห่งสรรพชีวิต: สายสัมพันธ์แห่งผู้คน สายน้ำ และพืชพรรณ สู่การดำรงชีวิตที่ยั่งยืน",
+    official_udon_title: "จังหวัดอุดรธานี",
+    official_udon_body:
+      "งานมหกรรมพืชสวนโลกจังหวัดอุดรธานี พ.ศ. 2569 สะท้อนวิสัยทัศน์ของโลกที่อยู่ร่วมกันอย่างกลมเกลียว แบ่งปันความอุดมสมบูรณ์จากแม่น้ำอันยิ่งใหญ่ ฟื้นสายสัมพันธ์แห่งมิตรภาพสู่อนุภาคลุ่มแม่น้ำโขง และเป็นงานพืชสวนโลกบนพื้นที่ชุ่มน้ำครั้งแรกของโลก",
+    official_exhibitor_title: "คู่มือผู้เข้าร่วมจัดสวนและนิทรรศการ",
+    official_exhibitor_body:
+      "ขอเรียนเชิญจัดสวนและนิทรรศการเข้าร่วมเป็นส่วนหนึ่งในงานมหกรรมพืชสวนโลกจังหวัดอุดรธานี พ.ศ. 2569",
+    read_more: "อ่านเพิ่ม",
+    exhibitor_guide_cta: "คู่มือผู้เข้าร่วม",
     countdown_label: "Countdown to International Horticultural Expo 2026",
     countdown_date: "1 พฤศจิกายน 2569 - 14 มีนาคม 2570",
     location_title: "Udon Thani, Thailand",
@@ -736,6 +749,19 @@ const officialContent = {
     hero_lead:
       "Udon Thani International Horticultural Expo 2026 projects a clear vision of the world living in harmony, sharing fertility from the great river and revitalizing companionship in the Greater Mekong Subregion.",
     hero_story: "Exhibitor Guidebook",
+    sustainability_eyebrow: "Official website content",
+    sustainability_title_html: "Experience Nature,<br />Embrace Sustainability",
+    official_theme_title: "Theme",
+    official_theme_body:
+      "Diversity of Life: the relationship among people, water and plants toward sustainable living.",
+    official_udon_title: "Udon Thani",
+    official_udon_body:
+      "Udon Thani International Horticultural Expo 2026 reflects a vision of a world living in harmony, sharing the fertility of the great river, revitalizing companionship in the Greater Mekong Subregion, and becoming the world's first horticultural expo on wetland areas.",
+    official_exhibitor_title: "Exhibitor guidebook",
+    official_exhibitor_body:
+      "Exhibitors are invited to participate in Udon Thani International Horticultural Expo 2026 through gardens and exhibitions.",
+    read_more: "Read more",
+    exhibitor_guide_cta: "Exhibitor guide",
     countdown_label: "Countdown to International Horticultural Expo 2026",
     countdown_date: "1 November 2026 - 14 March 2027",
     location_title: "Udon Thani, Thailand",
@@ -818,6 +844,19 @@ const officialContent = {
     hero_lead:
       "乌隆他尼国际园艺博览会 2026 展现人与自然和谐共生的愿景，分享大河带来的丰饶，并重建大湄公河次区域的友谊联系。",
     hero_story: "参展者指南",
+    sustainability_eyebrow: "官方网站内容",
+    sustainability_title_html: "Experience Nature,<br />Embrace Sustainability",
+    official_theme_title: "主题",
+    official_theme_body:
+      "生命多样性：人与水、植物之间的联系，通往可持续生活。",
+    official_udon_title: "乌隆他尼",
+    official_udon_body:
+      "乌隆他尼国际园艺博览会 2026 展现世界和谐共生的愿景，分享大河带来的丰饶，重建大湄公河次区域的友谊联系，并成为世界首个在湿地举办的国际园艺博览会。",
+    official_exhibitor_title: "参展者指南",
+    official_exhibitor_body:
+      "诚邀参展者通过花园与展览参与乌隆他尼国际园艺博览会 2026。",
+    read_more: "阅读更多",
+    exhibitor_guide_cta: "参展者指南",
     countdown_label: "距离乌隆他尼国际园艺博览会开幕",
     countdown_date: "2026年11月1日 - 2027年3月14日",
     location_title: "泰国乌隆他尼",
